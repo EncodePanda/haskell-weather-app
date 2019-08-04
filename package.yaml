@@ -1,0 +1,30 @@
+name:                haskell-weather-app
+version:             0.1.0.0
+github:              "rabbitonweb/haskell-weather-app"
+license:             BSD3
+author:              "Pawel Szulc"
+maintainer:          "paul.szulc@gmail.com"
+copyright:           "2019 Pawel Szulc"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+description:         Please see the README on GitHub at <https://github.com/githubuser/haskell-weather-app#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  app:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - haskell-weather-app
